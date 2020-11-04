@@ -47,6 +47,6 @@ while True:
     with open("testdb.csv", 'rb') as file:
         # Send the file
         ftp.storbinary('STOR testdb3.csv', file)
-        print('Файл', file, 'успешно загружен')
+        print('Файл', file.name, 'успешно загружен')
     # Adjust time to update the file
     time.sleep(15)
