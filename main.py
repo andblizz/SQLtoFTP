@@ -9,7 +9,7 @@ sql = "COPY (SELECT * FROM book) TO STDOUT WITH CSV DELIMITER ';'"
 # Log file creation.
 logger.add('debug.log', colorize=True, format='{time} {level} {message}', level='DEBUG')
 # An endless loop is used if the script is always running.
-# If you are running the script on a schedule, then just remove the "while True:".
+# If you are running the script on a schedule, then just remove the "while True:" and "time.sleep()".
 while True:
     start_time = time.time()
     # Database connection and file formation.
